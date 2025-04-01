@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "tun2socks"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "A lightweight tun2socks client based on lwIP"
   s.description  = <<-DESC
                    A tiny wrapper around lwIP and tun2socks for building iOS/macOS apps
