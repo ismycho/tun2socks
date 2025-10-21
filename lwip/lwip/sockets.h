@@ -34,7 +34,7 @@
 #ifndef __LWIP_SOCKETS_H__
 #define __LWIP_SOCKETS_H__
 
-#include "lwip/opt.h"
+#include "opt.h"
 
 #if LWIP_SOCKET /* don't build if not configured for use in lwipopts.h */
 

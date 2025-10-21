@@ -89,7 +89,6 @@
 		36A719321D5B0E2D00DC35F5 /* compat.c in Sources */ = {isa = PBXBuildFile; fileRef = 36BC58961CF2A33800E0E367 /* compat.c */; };
 		36A719331D5B0E3200DC35F5 /* sys_arch.c in Sources */ = {isa = PBXBuildFile; fileRef = 36E702771CEEDCCD002C2421 /* sys_arch.c */; };
 		36A719341D5B0E3200DC35F5 /* sys_arch.c in Sources */ = {isa = PBXBuildFile; fileRef = 36E702771CEEDCCD002C2421 /* sys_arch.c */; };
-		36A719351D5B0EFF00DC35F5 /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A718F11D5B0A1B00DC35F5 /* lwip.framework */; };
 		36A719361D5B0F0300DC35F5 /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A718FF1D5B0AC100DC35F5 /* lwip.framework */; };
 		36A719381D5B0F3100DC35F5 /* lwip.h in Headers */ = {isa = PBXBuildFile; fileRef = 36A719371D5B0F3100DC35F5 /* lwip.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36A719391D5B0F3100DC35F5 /* lwip.h in Headers */ = {isa = PBXBuildFile; fileRef = 36A719371D5B0F3100DC35F5 /* lwip.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -149,22 +148,25 @@
 		36C48CF81CF871D50071804F /* lwipopts.h in Headers */ = {isa = PBXBuildFile; fileRef = 3642CB4E1CEDCD6E001E0AAF /* lwipopts.h */; };
 		36E44A001CF2EA9500185DBF /* tun2socks.h in Headers */ = {isa = PBXBuildFile; fileRef = 3642CA011CEDCC60001E0AAF /* tun2socks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36E7027A1CEEEB57002C2421 /* TSTCPSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E702791CEEEB57002C2421 /* TSTCPSocket.swift */; };
+		4F775C7D2E83DF3300175B75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F775C7C2E83DF3300175B75 /* Cocoa.framework */; };
+		4F775C7E2E83E57500175B75 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F775C7C2E83DF3300175B75 /* Cocoa.framework */; };
+		4F775C7F2E83E6FD00175B75 /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A718F11D5B0A1B00DC35F5 /* lwip.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		36A719071D5B0B0100DC35F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3642C9F51CEDCC60001E0AAF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36A718F01D5B0A1B00DC35F5;
-			remoteInfo = "lwip-macOS";
-		};
 		36A719091D5B0B0800DC35F5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3642C9F51CEDCC60001E0AAF /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 36A718FE1D5B0AC100DC35F5;
 			remoteInfo = "lwip-iOS";
+		};
+		4F775C812E83E6FD00175B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3642C9F51CEDCC60001E0AAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36A718F01D5B0A1B00DC35F5;
+			remoteInfo = "lwip-macOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -313,6 +315,7 @@
 		36E44A9E1CF3EB6B00185DBF /* slipif.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = slipif.h; sourceTree = "<group>"; };
 		36E702771CEEDCCD002C2421 /* sys_arch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sys_arch.c; sourceTree = "<group>"; };
 		36E702791CEEEB57002C2421 /* TSTCPSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSTCPSocket.swift; sourceTree = "<group>"; };
+		4F775C7C2E83DF3300175B75 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,7 +323,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36A719351D5B0EFF00DC35F5 /* lwip.framework in Frameworks */,
+				4F775C7F2E83E6FD00175B75 /* lwip.framework in Frameworks */,
+				4F775C7E2E83E57500175B75 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +332,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F775C7D2E83DF3300175B75 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +365,7 @@
 				36C48CA31CF8701A0071804F /* tun2socks-iOS */,
 				368225B41D114ADF00E7B495 /* tun2socks-macOS */,
 				36C48C9C1CF8667F0071804F /* README.md */,
+				4F269E012B4E3B48003D98D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -659,6 +665,14 @@
 			path = netif;
 			sourceTree = "<group>";
 		};
+		4F269E012B4E3B48003D98D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F775C7C2E83DF3300175B75 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -799,7 +813,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				36A719081D5B0B0100DC35F5 /* PBXTargetDependency */,
+				4F775C822E83E6FD00175B75 /* PBXTargetDependency */,
 			);
 			name = "tun2socks-macOS";
 			productName = tun2socks;
@@ -1018,15 +1032,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		36A719081D5B0B0100DC35F5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 36A718F01D5B0A1B00DC35F5 /* lwip-macOS */;
-			targetProxy = 36A719071D5B0B0100DC35F5 /* PBXContainerItemProxy */;
-		};
 		36A7190A1D5B0B0800DC35F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 36A718FE1D5B0AC100DC35F5 /* lwip-iOS */;
 			targetProxy = 36A719091D5B0B0800DC35F5 /* PBXContainerItemProxy */;
+		};
+		4F775C822E83E6FD00175B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36A718F01D5B0A1B00DC35F5 /* lwip-macOS */;
+			targetProxy = 4F775C812E83E6FD00175B75 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1153,11 +1167,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "tun2socks-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.tun2socks;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
@@ -1173,11 +1188,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "tun2socks-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.tun2socks;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
@@ -1193,15 +1209,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/lwip/src/include",
+					"$(SRCROOT)/lwip/arch",
+				);
 				INFOPLIST_FILE = "lwip-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.lwip;
 				PRODUCT_NAME = lwip;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/lwip";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1214,15 +1236,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/lwip/src/include",
+					"$(SRCROOT)/lwip/arch",
+				);
 				INFOPLIST_FILE = "lwip-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.osx.lwip;
 				PRODUCT_NAME = lwip;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/lwip";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -1239,7 +1267,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpnservice.panda.ios.lwip;
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.lwip;
 				PRODUCT_NAME = lwip;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1262,7 +1290,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vpnservice.panda.ios.lwip;
+				PRODUCT_BUNDLE_IDENTIFIER = me.zhuhaow.ios.lwip;
 				PRODUCT_NAME = lwip;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

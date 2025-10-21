@@ -7,22 +7,22 @@
 		<key>lwip-iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>4</integer>
 		</dict>
 		<key>lwip-macOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>6</integer>
 		</dict>
 		<key>tun2socks-iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>40</integer>
+			<integer>23</integer>
 		</dict>
 		<key>tun2socks-macOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>41</integer>
+			<integer>25</integer>
 		</dict>
 	</dict>
 </dict>

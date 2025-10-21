@@ -1,6 +1,6 @@
 #include <mach/mach_time.h>
-#include "arch/sys_arch.h"
-#include "lwip/sys.h"
+#include "sys_arch.h"
+#include "sys.h"
 
 u32_t sys_now(void) {
     uint64_t now = mach_absolute_time();

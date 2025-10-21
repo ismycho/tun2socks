@@ -46,7 +46,7 @@
 /* @todo Check the use of '(struct udp_pcb).chksum_len_rx'!
  */
 
-#include "lwip/opt.h"
+#include "opt.h"
 
 #if LWIP_UDP /* don't build if not configured for use in lwipopts.h */
 

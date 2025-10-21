@@ -4,7 +4,7 @@ import lwip
 /**
  The delegate that developer should implement to handle various TCP events.
  */
-public protocol TSTCPSocketDelegate: class {
+public protocol TSTCPSocketDelegate: AnyObject {
     /**
      The socket is closed on tx side (FIN received). We will not read any data.
      */

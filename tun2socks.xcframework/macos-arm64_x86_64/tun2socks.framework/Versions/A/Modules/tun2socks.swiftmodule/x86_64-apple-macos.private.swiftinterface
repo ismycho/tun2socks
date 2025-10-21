@@ -1,0 +1,46 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target x86_64-apple-macos11.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name tun2socks
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import lwip
+@_exported import tun2socks
+public protocol TSTCPSocketDelegate : AnyObject {
+  func localDidClose(_ socket: tun2socks.TSTCPSocket)
+  func socketDidReset(_ socket: tun2socks.TSTCPSocket)
+  func socketDidAbort(_ socket: tun2socks.TSTCPSocket)
+  func socketDidClose(_ socket: tun2socks.TSTCPSocket)
+  func didReadData(_ data: Foundation.Data, from: tun2socks.TSTCPSocket)
+  func didWriteData(_ length: Swift.Int, from: tun2socks.TSTCPSocket)
+}
+@_hasMissingDesignatedInitializers final public class TSTCPSocket {
+  final public let sourceAddress: Darwin.in_addr
+  final public let destinationAddress: Darwin.in_addr
+  final public let sourcePort: Swift.UInt16
+  final public let destinationPort: Swift.UInt16
+  final public var isConnected: Swift.Bool {
+    get
+  }
+  weak final public var delegate: (any tun2socks.TSTCPSocketDelegate)?
+  final public func writeData(_ data: Foundation.Data)
+  final public func close()
+  final public func reset()
+  @objc deinit
+}
+public protocol TSIPStackDelegate : AnyObject {
+  func didAcceptTCPSocket(_ sock: tun2socks.TSTCPSocket)
+}
+@_hasMissingDesignatedInitializers final public class TSIPStack {
+  public static var stack: tun2socks.TSIPStack
+  final public var processQueue: Dispatch.DispatchQueue
+  final public var outputBlock: (([Foundation.Data], [Foundation.NSNumber]) -> ())!
+  weak final public var delegate: (any tun2socks.TSIPStackDelegate)?
+  final public func suspendTimer()
+  final public func resumeTimer()
+  final public func received(packet: Foundation.Data)
+  @objc deinit
+}

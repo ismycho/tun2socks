@@ -38,26 +38,26 @@
  *
  */
 
-#include "lwip/opt.h"
+#include "opt.h"
 
-#include "lwip/memp.h"
-#include "lwip/pbuf.h"
-#include "lwip/udp.h"
-#include "lwip/raw.h"
-#include "lwip/tcp_impl.h"
-#include "lwip/igmp.h"
-#include "lwip/api.h"
-#include "lwip/api_msg.h"
-#include "lwip/tcpip.h"
-#include "lwip/sys.h"
-#include "lwip/timers.h"
-#include "lwip/stats.h"
-#include "netif/etharp.h"
-#include "lwip/ip_frag.h"
-#include "lwip/snmp_structs.h"
-#include "lwip/snmp_msg.h"
-#include "lwip/dns.h"
-#include "netif/ppp_oe.h"
+#include "memp.h"
+#include "pbuf.h"
+#include "udp.h"
+#include "raw.h"
+#include "tcp_impl.h"
+#include "igmp.h"
+#include "api.h"
+#include "api_msg.h"
+#include "tcpip.h"
+#include "sys.h"
+#include "timers.h"
+#include "stats.h"
+#include "etharp.h"
+#include "ip_frag.h"
+#include "snmp_structs.h"
+#include "snmp_msg.h"
+#include "dns.h"
+#include "ppp_oe.h"
 
 #include <string.h>
 
@@ -128,7 +128,7 @@ static
 #endif
 const u16_t memp_sizes[MEMP_MAX] = {
 #define LWIP_MEMPOOL(name,num,size,desc)  LWIP_MEM_ALIGN_SIZE(size),
-#include "lwip/memp_std.h"
+#include "memp_std.h"
 };
 
 #if !MEMP_MEM_MALLOC /* don't build if not configured for use in lwipopts.h */

@@ -35,7 +35,7 @@
 #ifndef __NETIF_ETHARP_H__
 #define __NETIF_ETHARP_H__
 
-#include "lwip/opt.h"
+#include "opt.h"
 
 #if LWIP_ARP || LWIP_ETHERNET /* don't build if not configured for use in lwipopts.h */
 

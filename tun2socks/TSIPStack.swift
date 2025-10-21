@@ -2,7 +2,7 @@ import Foundation
 import lwip
 
 /// The delegate that the developer should implement to handle what to do when a new TCP socket is connected.
-public protocol TSIPStackDelegate: class {
+public protocol TSIPStackDelegate: AnyObject {
     /**
      A new TCP socket is accepted. This means we received a new TCP packet containing SYN signal.
 
